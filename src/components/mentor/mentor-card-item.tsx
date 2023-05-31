@@ -17,15 +17,11 @@ const MentorCardItem: FC<Props> = ({ item }) => {
   const hourTime = ~~(minTime / 60)
   const dayTime = ~~(hourTime / 24)
   const restHourTime = ~~(hourTime - dayTime * 24)
-  console.log('minTime: ', minTime)
+  // console.log('minTime: ', minTime)
   let time: any = ''
 
-  // if (hourTime >= 1) {
-  //   time = hourTime + ' ' + 'hours'
-  // }
-
   if (dayTime > 1) {
-    time = dayTime + '' + 'days'
+    time = dayTime + ' ' + 'days'
   } else if (dayTime == 1) {
     time = '1 day' + ' ' + restHourTime + ' ' + 'hours'
   } else if (dayTime < 1) {
@@ -39,7 +35,7 @@ const MentorCardItem: FC<Props> = ({ item }) => {
   }
   return (
     <div className="mentor_container">
-      <Image src={item.imageUrl} alt={'Products ' + item.asin} width={300} height={180} className="image_container" />
+      <Image src={item.imageUrl} alt={'Products ' + item.asin} width={300} height={200} className="image_container" />
       <div className="mentor_mainRight">
         <div className="mentorRight_update">
           <div></div>

@@ -1,17 +1,40 @@
 import React, { FC, useState } from 'react'
 import Box from '@mui/material/Box'
-// import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
 import { TextField, MenuItem, FormControl, Select, SelectChangeEvent } from '@mui/material'
 import { FilterList } from '@mui/icons-material'
+import { useDispatch } from 'react-redux'
+import { setMinPrice, setMaxPrice, setMostRecent } from '@/querySlice'
 
 const HomeFeature: FC = () => {
   const [filter, setFilter] = useState('')
+  const dispatch = useDispatch()
 
   const handleChange: any = (event: SelectChangeEvent) => {
     setFilter(event.target.value)
   }
 
+  dispatch(setMostRecent(filter))
+
+  const handleMinPriceChange: any = (e: any) => {
+    dispatch(setMinPrice(e.target.value))
+  }
+
+  const handleMaxPriceChange: any = (e: any) => {
+    dispatch(setMaxPrice(e.target.value))
+  }
+
+  // const handleMostRecentChange: any = (e: any) => {
+  //   dispatch(setMostRecent(e.target.value))
+  // }
+
+  // const handlePriceHLChange: any = (e: any) => {
+  //   dispatch(setPriceHL(e.target.value))
+  // }
+
+  // const handlePriceLHChange: any = (e: any) => {
+  //   dispatch(setPriceLH(e.target.value))
+  // }
   return (
     <div className="feature_container">
       <div className="feature_detail">
@@ -28,6 +51,7 @@ const HomeFeature: FC = () => {
               placeholder="Min"
               type="number"
               InputLabelProps={{ shrink: true }}
+              onChange={handleMinPriceChange}
               sx={{ backgroundColor: '#fff', border: 'none', borderRadius: 1 }}
             />
           </Box>
@@ -41,6 +65,7 @@ const HomeFeature: FC = () => {
               placeholder="Max"
               type="number"
               InputLabelProps={{ shrink: true }}
+              onChange={handleMaxPriceChange}
               sx={{ backgroundColor: '#fff', border: 'none', borderRadius: 1 }}
             />
           </Box>

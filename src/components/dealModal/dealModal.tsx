@@ -8,6 +8,27 @@ interface Props {
 }
 
 const DealModal: FC<Props> = ({ setIsOpen, item }) => {
+  const d = new Date(String(item.dealCreatedAt))
+  const minTime = ~~((Date.now() - d.getTime()) / 1000 / 60)
+  const hourTime = ~~(minTime / 60)
+  const dayTime = ~~(hourTime / 24)
+  const restHourTime = ~~(hourTime - dayTime * 24)
+  let time: any = ''
+
+  if (dayTime > 1) {
+    time = dayTime + ' ' + 'days'
+  } else if (dayTime == 1) {
+    time = '1 day' + ' ' + restHourTime + ' ' + 'hours'
+  } else if (dayTime < 1) {
+    if (hourTime > 1) {
+      time = hourTime + ' ' + 'hours'
+    } else if (hourTime < 1) {
+      time = minTime + ' ' + 'minutes'
+    } else if (hourTime == 1) {
+      time = '1 hour '
+    }
+  }
+
   return (
     <>
       <div className="modal_background" onClick={() => setIsOpen(false)} />
@@ -15,7 +36,7 @@ const DealModal: FC<Props> = ({ setIsOpen, item }) => {
         <div className="getDealContainer_main">
           <div className="getDealContainer_left">
             <div className="getDeal_alert">
-              This product was found 2 hours ago may have changed since then. Please ensure you do your own research
+              This product was found {time} ago may have changed since then. Please ensure you do your own research
               before purchasing any product!
             </div>
             <div className="getDeal_title">{item.title}</div>
@@ -38,7 +59,7 @@ const DealModal: FC<Props> = ({ setIsOpen, item }) => {
           </div>
           <div className="getDealContainer_right">
             <div className="getDeal_imageContainer">
-              <Image src={item.imageUrl} width="800px" height="1200px" alt="getDeal" />
+              <Image src={item.imageUrl} width={700} height={700} alt="getDeal" />
             </div>
           </div>
         </div>
