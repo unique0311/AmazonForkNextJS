@@ -13,9 +13,9 @@ const DynamicHomeWarning = dynamic(() => import('../components/home/warning'))
 const Home: NextPageWithLayout = () => {
   return (
     <>
+      <DynamicHomeWarning />
       <DynamicHomePopularCourse />
       <DynamicHomeFeature />
-      <DynamicHomeWarning />
       <DynamicHomeOurMentors />
       <DynamicHomeNewsLetter />
     </>

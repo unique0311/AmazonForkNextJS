@@ -1,10 +1,7 @@
 import React, { FC, useState } from 'react'
 import Image from 'next/image'
-// import Box from '@mui/material/Box'
 import { Schedule } from '@mui/icons-material'
-// import Typography from '@mui/material/Typography'
 import { DealModal } from '../dealModal'
-
 import { Mentor } from '@/interfaces/mentor'
 
 interface Props {
@@ -14,16 +11,41 @@ interface Props {
 const MentorCardItem: FC<Props> = ({ item }) => {
   const [isOpen, setIsOpen] = useState(false)
   // const currentDate: any = new Date().toLocaleString()
+  const d = new Date(String(item.dealCreatedAt))
+  // console.log((Date.now() - d.getTime()) / 1000)
+  const minTime = ~~((Date.now() - d.getTime()) / 1000 / 60)
+  const hourTime = ~~(minTime / 60)
+  const dayTime = ~~(hourTime / 24)
+  const restHourTime = ~~(hourTime - dayTime * 24)
+  console.log('minTime: ', minTime)
+  let time: any = ''
 
+  // if (hourTime >= 1) {
+  //   time = hourTime + ' ' + 'hours'
+  // }
+
+  if (dayTime > 1) {
+    time = dayTime + '' + 'days'
+  } else if (dayTime == 1) {
+    time = '1 day' + ' ' + restHourTime + ' ' + 'hours'
+  } else if (dayTime < 1) {
+    if (hourTime > 1) {
+      time = hourTime + ' ' + 'hours'
+    } else if (hourTime < 1) {
+      time = minTime + ' ' + 'minutes'
+    } else if (hourTime == 1) {
+      time = '1 hour '
+    }
+  }
   return (
     <div className="mentor_container">
-      <Image src={item.imageUrl} alt={'Products ' + item.asin} width={200} height={200} className="image_container" />
+      <Image src={item.imageUrl} alt={'Products ' + item.asin} width={300} height={180} className="image_container" />
       <div className="mentor_mainRight">
         <div className="mentorRight_update">
           <div></div>
           <div className="mentorUpdate_show">
             <Schedule />
-            <p>Posted {item.dealCreatedAt} </p>
+            <p>Posted {time} ago</p>
           </div>
         </div>
         <h5>{item.title}</h5>

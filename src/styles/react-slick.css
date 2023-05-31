@@ -208,7 +208,7 @@
 
 .mentor_mainRight h5 {
   font-size: 1.25rem;
-  margin-top: 5px;
+  margin-top: 30px;
   margin-bottom: 5px;
 }
 
@@ -253,8 +253,7 @@
 }
 
 .image_container {
-  width: 180px;
-  height: 180px;
+  overflow: hidden;
 }
 
 .currentPrice {
@@ -459,7 +458,7 @@
   height: 30px;
   background: #e74c3c;
   right: 0;
-  top: 45px;
+  top: 60px;
   align-items: center;
   justify-content: center;
   color: white;
