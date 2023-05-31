@@ -23,8 +23,8 @@ const DealModal: FC<Props> = ({ setIsOpen, item }) => {
             <div className="getDeal_price">
               <p>Current Price</p>
               <div className="getDealPrice_now">
-                <h5>${item.price}</h5>
-                <h4>${item.beforePrice}</h4>
+                <h5>£{item.price}</h5>
+                <h4>£{item.beforePrice}</h4>
               </div>
             </div>
             <div className="getDeal_buttonContainer">

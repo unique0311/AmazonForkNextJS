@@ -28,8 +28,8 @@ const MentorCardItem: FC<Props> = ({ item }) => {
         </div>
         <h5>{item.title}</h5>
         <div className="mentorRight_price">
-          <div className="currentPrice">${item.price}</div>
-          <div className="beforePrice">${item.beforePrice}</div>
+          <div className="currentPrice">£{item.price}</div>
+          <div className="beforePrice">£{item.beforePrice}</div>
           <div className="priceCross" />
           <div className="manufacturer">{item.manufacturer}</div>
         </div>

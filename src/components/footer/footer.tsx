@@ -17,7 +17,7 @@ const Footer: FC = () => {
                 <Image src="/images/logo_donkey.png" alt="Discount Donkey" width={200} height={50} />
               </Typography>
               <Typography variant="subtitle1" sx={{ letterSpacing: 1, mb: 2 }}>
-                Coursespace is an online learning platform that has been operating since 2018 until now.
+                Discount Donkey is an E-commerce platform that has been operating since 2023 until now.
               </Typography>
               <FooterSocialLinks />
             </Box>

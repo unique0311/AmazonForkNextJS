@@ -11,9 +11,9 @@ const HomeOurMentors: FC = () => {
   // const [data, setData] = useState([])
   const query = useSelector(selectQueryState)
 
-  // const searchFilter = (array: any[]) => {
-  //   return array.filter((el: any) => el.name.common.toLowerCase().indexOf(query.toLocaleLowerCase()) >= 0)
-  // }
+  const searchFilter = (array: any[]) => {
+    return array.filter((el: any) => el.title.toLowerCase().indexOf(query.toLocaleLowerCase()) >= 0)
+  }
 
   // useEffect(() => {
   //   getData().then((result: any) => {
@@ -22,7 +22,7 @@ const HomeOurMentors: FC = () => {
   //   })
   // }, [])
 
-  // const filtered = searchFilter(data)
+  const filtered = searchFilter(data)
 
   return (
     <Box
@@ -40,7 +40,7 @@ const HomeOurMentors: FC = () => {
       }}
     >
       <Container maxWidth="lg">
-        {data.map((item) => (
+        {filtered.map((item) => (
           <MentorCardItem key={String(item)} item={item} />
         ))}
       </Container>
