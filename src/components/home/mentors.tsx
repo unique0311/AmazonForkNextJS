@@ -11,7 +11,7 @@ const HomeOurMentors: FC = () => {
   // const [data, setData] = useState([])
   const query = useSelector(selectQueryState)
 
-  const searchFilter = (array: any[]) => {
+  const searchFilter: any = (array: any[]) => {
     return array.filter((el: any) => el.title.toLowerCase().indexOf(query.toLocaleLowerCase()) >= 0)
   }
 
@@ -40,7 +40,7 @@ const HomeOurMentors: FC = () => {
       }}
     >
       <Container maxWidth="lg">
-        {filtered.map((item) => (
+        {filtered.map((item: Mentor) => (
           <MentorCardItem key={String(item)} item={item} />
         ))}
       </Container>
