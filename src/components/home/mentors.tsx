@@ -23,7 +23,7 @@ const HomeOurMentors: FC = () => {
   const priceHL = useSelector(selectPriceHLState)
   const priceLH = useSelector(selectPriceLHState)
 
-  console.log('mostRecents: ...', mostRecent)
+  // console.log('mostRecents: ...', mostRecent)
 
   const searchFilter: any = (array: any[]) => {
     return array.filter(
@@ -41,8 +41,23 @@ const HomeOurMentors: FC = () => {
 
   const filtered = searchFilter(data)
 
+  let sortData: any = filtered
+
   if (mostRecent == 'mostRecent') {
+    sortData = filtered.slice().sort((date1: any, date2: any) => {
+      return date2.dealCreatedAt > date1.dealCreatedAt ? 1 : date2.dealCreatedAt < date1.dealCreatedAt ? -1 : 0
+    })
+  } else if (mostRecent == 'priceHL') {
+    sortData = filtered.slice().sort((price1: any, price2: any) => {
+      return price2.price > price1.price ? 1 : price2.price < price1.price ? -1 : 0
+    })
+  } else if (mostRecent == 'priceLH') {
+    sortData = filtered.slice().sort((price1: any, price2: any) => {
+      return price1.price > price2.price ? 1 : price1.price < price2.price ? -1 : 0
+    })
   }
+
+  console.log('sortDate: ///', sortData)
 
   return (
     <Box
@@ -60,7 +75,7 @@ const HomeOurMentors: FC = () => {
       }}
     >
       <Container maxWidth="lg">
-        {filtered.map((item: Mentor) => (
+        {sortData.map((item: Mentor) => (
           <MentorCardItem key={String(item)} item={item} />
         ))}
       </Container>
