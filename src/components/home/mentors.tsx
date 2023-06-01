@@ -25,7 +25,6 @@ const HomeOurMentors: FC = () => {
 
   useEffect(() => {
     getData().then((result: any) => {
-      // console.log(result)
       setData(result.data)
     })
   }, [])

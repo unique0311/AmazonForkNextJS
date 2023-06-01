@@ -66,7 +66,6 @@ const SocialLinkItem: FC<SocialLinkItemProps> = ({ item }) => (
       }}
       href={item.link}
     >
-      {/* eslint-disable-next-line */}
       <img src={item.icon} alt={item.name + 'icon'} />
     </Link>
   </Box>

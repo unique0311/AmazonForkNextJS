@@ -24,17 +24,6 @@ const HomeFeature: FC = () => {
     dispatch(setMaxPrice(e.target.value))
   }
 
-  // const handleMostRecentChange: any = (e: any) => {
-  //   dispatch(setMostRecent(e.target.value))
-  // }
-
-  // const handlePriceHLChange: any = (e: any) => {
-  //   dispatch(setPriceHL(e.target.value))
-  // }
-
-  // const handlePriceLHChange: any = (e: any) => {
-  //   dispatch(setPriceLH(e.target.value))
-  // }
   return (
     <div className="feature_container">
       <div className="feature_detail">
@@ -47,7 +36,6 @@ const HomeFeature: FC = () => {
           <Box component="form" sx={{ '& .MuiTextField-root': { m: 1, width: 250 } }} noValidate autoComplete="off">
             <TextField
               id="min-number"
-              // label="Number"
               placeholder="Min"
               type="number"
               InputLabelProps={{ shrink: true }}
@@ -61,7 +49,6 @@ const HomeFeature: FC = () => {
           <Box component="form" sx={{ '& .MuiTextField-root': { m: 1, width: 250 } }} noValidate autoComplete="off">
             <TextField
               id="max-number"
-              // label="Number"
               placeholder="Max"
               type="number"
               InputLabelProps={{ shrink: true }}

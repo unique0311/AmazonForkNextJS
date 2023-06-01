@@ -8,6 +8,4 @@ export default function Page(): any {
   useEffect(() => {
     return window.location.replace('https://www.amazon.co.uk/dp/' + asin + '?tag=sellercirclel-21')
   }, [asin])
-
-  // const redirectionLink = window.location.replace('https://www.amazon.co.uk/dp/' + { asin } + '?tag=sellercirclel-21')
 }

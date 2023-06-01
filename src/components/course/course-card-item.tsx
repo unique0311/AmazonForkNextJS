@@ -1,11 +1,9 @@
 import React, { FC } from 'react'
 import Image from 'next/image'
 import Box from '@mui/material/Box'
-// import Rating from '@mui/material/Rating'
 import Typography from '@mui/material/Typography'
 import IconButton, { iconButtonClasses } from '@mui/material/IconButton'
 import ArrowForward from '@mui/icons-material/ArrowForward'
-// import { Course } from '@/interfaces/course'
 import { Mentor } from '@/interfaces/mentor'
 
 interface Props {
@@ -51,7 +49,6 @@ const CourseCardItem: FC<Props> = ({ item }) => {
             {item.title}
           </Typography>
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            {/* <Rating name="rating-course" value={item.rating} max={5} sx={{ color: '#ffce31', mr: 1 }} readOnly /> */}
             <Typography component="span" variant="h5" sx={{ height: '35px' }}>
               {item.manufacturer}
             </Typography>

@@ -1,6 +1,5 @@
 import React, { FC } from 'react'
 import Box from '@mui/material/Box'
-// import { Link as ScrollLink } from 'react-scroll'
 import { navigations } from './navigation.data'
 import Link from 'next/link'
 import MuiLink from '@mui/material/Link'
