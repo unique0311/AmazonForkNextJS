@@ -9,7 +9,9 @@ interface Props {
 
 const DealModal: FC<Props> = ({ setIsOpen, item }) => {
   const d = new Date(String(item.dealCreatedAt))
-  const minTime = ~~((Date.now() - d.getTime()) / 1000 / 60)
+  const currentUrl = window.location.href
+  const redirectionLink: any = String(item.link) + '?tag=sellercirclel-21'
+  const minTime = ~~((Date.now() - d.getTime()) / 1000 / 60) + 300
   const hourTime = ~~(minTime / 60)
   const dayTime = ~~(hourTime / 24)
   const restHourTime = ~~(hourTime - dayTime * 24)
@@ -52,14 +54,14 @@ const DealModal: FC<Props> = ({ setIsOpen, item }) => {
               <div className="getDeal_cancelButton" onClick={() => setIsOpen(false)}>
                 Cancel
               </div>
-              <a href={item.link} className="getDeal_confirmButton">
+              <a id="myLink" href={redirectionLink} className="getDeal_confirmButton">
                 Get Deal
               </a>
             </div>
           </div>
           <div className="getDealContainer_right">
             <div className="getDeal_imageContainer">
-              <Image src={item.imageUrl} width={700} height={700} alt="getDeal" />
+              <Image src={item.imageUrl} width={600} height={600} alt="getDeal" />
             </div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useState, useEffect } from 'react'
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 import Slider, { Settings } from 'react-slick'
@@ -9,8 +9,9 @@ import { IconButton, useMediaQuery } from '@mui/material'
 import IconArrowBack from '@mui/icons-material/ArrowBack'
 import IconArrowForward from '@mui/icons-material/ArrowForward'
 
-import { data } from './mentors.data'
+import { getData } from './mentors.data'
 import { CourseCardItem } from '@/components/course'
+import { Mentor } from '@/interfaces/mentor'
 
 interface SliderArrowArrow {
   onClick?: () => void
@@ -61,7 +62,20 @@ const StyledDots = styled('ul')(({ theme }) => ({
 const HomePopularCourse: FC = () => {
   const { breakpoints } = useTheme()
   const matchMobileView = useMediaQuery(breakpoints.down('md'))
-  // const [data, setData] = useState();
+  const [data, setData] = useState([])
+
+  useEffect(() => {
+    getData().then((result: any) => {
+      // console.log(result)
+      setData(result.data)
+    })
+  }, [])
+
+  let sortData: any = data
+
+  sortData = data.slice().sort((date1: any, date2: any) => {
+    return date2.dealCreatedAt > date1.dealCreatedAt ? 1 : date2.dealCreatedAt < date1.dealCreatedAt ? -1 : 0
+  })
 
   const sliderConfig: Settings = {
     infinite: true,
@@ -110,7 +124,7 @@ const HomePopularCourse: FC = () => {
 
           <Grid item xs={12} md={12}>
             <Slider {...sliderConfig}>
-              {data.map((item) => (
+              {sortData.map((item: Mentor) => (
                 <CourseCardItem key={String(item.asin)} item={item} />
               ))}
             </Slider>

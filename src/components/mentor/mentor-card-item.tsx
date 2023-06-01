@@ -10,14 +10,17 @@ interface Props {
 
 const MentorCardItem: FC<Props> = ({ item }) => {
   const [isOpen, setIsOpen] = useState(false)
+  const dates = new Date()
+  const formattedDate: any = dates.toLocaleString('en-GB', { timeZone: 'Europe/London' })
+
   // const currentDate: any = new Date().toLocaleString()
   const d = new Date(String(item.dealCreatedAt))
-  // console.log((Date.now() - d.getTime()) / 1000)
-  const minTime = ~~((Date.now() - d.getTime()) / 1000 / 60)
+  const minTime = ~~((Date.now() - d.getTime()) / 1000 / 60) + 300
   const hourTime = ~~(minTime / 60)
   const dayTime = ~~(hourTime / 24)
   const restHourTime = ~~(hourTime - dayTime * 24)
-  // console.log('minTime: ', minTime)
+  const restMinuteTime = ~~(minTime - hourTime * 60)
+
   let time: any = ''
 
   if (dayTime > 1) {
@@ -30,7 +33,7 @@ const MentorCardItem: FC<Props> = ({ item }) => {
     } else if (hourTime < 1) {
       time = minTime + ' ' + 'minutes'
     } else if (hourTime == 1) {
-      time = '1 hour '
+      time = '1 hour ' + restMinuteTime + ' ' + 'mins'
     }
   }
   return (

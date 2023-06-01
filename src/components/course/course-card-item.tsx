@@ -52,7 +52,7 @@ const CourseCardItem: FC<Props> = ({ item }) => {
           </Typography>
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             {/* <Rating name="rating-course" value={item.rating} max={5} sx={{ color: '#ffce31', mr: 1 }} readOnly /> */}
-            <Typography component="span" variant="h5">
+            <Typography component="span" variant="h5" sx={{ height: '35px' }}>
               {item.manufacturer}
             </Typography>
           </Box>

@@ -6,13 +6,18 @@ import type { Navigation } from '@/interfaces/navigation'
 import { navigations as headerNavigations } from '@/components/navigation/navigation.data'
 import { FooterSectionTitle } from '@/components/footer'
 
-const pageMenu = headerNavigations
+// const pageMenu = headerNavigations
+
+const pageMenu: Array<Navigation> = [
+  { label: 'All Deals', path: '#' },
+  { label: 'Categories', path: '#popular-course' },
+  { label: 'Join', path: '#newsletter' },
+  { label: 'About Us', path: 'aboutUs' },
+]
 
 const companyMenu: Array<Navigation> = [
-  { label: 'Contact Us', path: '#' },
-  { label: 'Privacy & Policy', path: '#' },
-  { label: 'Term & Condition', path: '#' },
-  { label: 'FAQ', path: '#' },
+  { label: 'Privacy & Policy', path: 'privacyAndPolicy' },
+  { label: 'Terms of Service', path: 'termsOfService' },
 ]
 
 interface NavigationItemProps {
