@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 
-export default function Page() {
+export default function Page(): any {
   const router = useRouter()
   const { asin }: any = router.query
 
