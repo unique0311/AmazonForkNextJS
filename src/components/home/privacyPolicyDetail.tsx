@@ -6,7 +6,7 @@ const PrivacyPolicyDetail: FC = () => {
       <h1>Introduction</h1>
       <div className="subdetail_container">
         <div />
-        <h2>Welcome to Discount Donkey (here after referred to as "the Website").</h2>
+        <h2>Welcome to Discount Donkey (here after referred to as &quot;the Website&quot;).</h2>
       </div>
       <p>
         This page informs you of our policies regarding the collection, use, and disclosure of personal data when you
@@ -27,8 +27,8 @@ const PrivacyPolicyDetail: FC = () => {
       </div>
       <p>
         While using our Website, we may ask you to provide us with certain personally identifiable information that can
-        be used to contact or identify you ("Personal Data"). Personally identifiable information may include, but is
-        not limited to:
+        be used to contact or identify you (&quot;Personal Data&quot;). Personally identifiable information may include,
+        but is not limited to:
       </p>
       <div className="subdetail_container">
         <div />
@@ -43,10 +43,10 @@ const PrivacyPolicyDetail: FC = () => {
         <h2>Usage Data</h2>
       </div>
       <p>
-        We may also collect information about how the Website is accessed and used ("Usage Data"). This Usage Data may
-        include information such as your computer's Internet Protocol address (e.g. IP address), browser type, browser
-        version, the pages of our Website that you visit, the time and date of your visit, the time spent on those
-        pages, unique device identifiers and other diagnostic data.
+        We may also collect information about how the Website is accessed and used (&quot;Usage Data&quot;). This Usage
+        Data may include information such as your computer&apos;s Internet Protocol address (e.g. IP address), browser
+        type, browser version, the pages of our Website that you visit, the time and date of your visit, the time spent
+        on those pages, unique device identifiers and other diagnostic data.
       </p>
       <div className="subdetail_container">
         <div />

@@ -5,9 +5,9 @@ const TermsOfServiceDetail: FC = () => {
     <div className="termsOfService_container">
       <h2>1. Introduction</h2>
       <p>
-        Welcome to Discount Donkey (the "Website"). The Website is owned and operated by [Your Company Name] ("us",
-        "we", or "our"). Please read these Terms of Service ("Terms", "Terms of Service") carefully before using our
-        Website.
+        Welcome to Discount Donkey (the &quot;Website&quot;). The Website is owned and operated by [Your Company Name]
+        (&quot;us&quot;, &quot;we&quot;, or &quot;our&quot;). Please read these Terms of Service (&quot;Terms&quot;,
+        &quot;Terms of Service&quot;) carefully before using our Website.
       </p>
 
       <p>
@@ -28,9 +28,9 @@ const TermsOfServiceDetail: FC = () => {
       <p>You must not transmit any worms or viruses or any code of a destructive nature.</p>
       <h2>3. Affiliate Disclosure</h2>
       <p>
-        This Website contains links to products on Amazon. Some of the links are "affiliate links", a link with a
-        special tracking code. This means if you click on an affiliate link and purchase the item, we will receive an
-        affiliate commission.
+        This Website contains links to products on Amazon. Some of the links are &quot;affiliate links&quot;, a link
+        with a special tracking code. This means if you click on an affiliate link and purchase the item, we will
+        receive an affiliate commission.
       </p>
       <p>
         The price of the item is the same whether it is an affiliate link or not. Regardless, we only recommend products

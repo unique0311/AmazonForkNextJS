@@ -5,16 +5,16 @@ const aboutUsDetail: FC = () => {
     <div className="aboutDetail_container">
       <h2>🎉 Welcome to Discount Donkey! 🎉</h2>
       <h5>
-        Navigating the vastness of Amazon UK for the best deals can feel like finding a needle in a haystack. That's
-        where we step in. Discount Donkey is your premier guide to unlocking extraordinary savings, empowering you to
-        shop smarter, not harder.
+        Navigating the vastness of Amazon UK for the best deals can feel like finding a needle in a haystack.
+        That&apos;s where we step in. Discount Donkey is your premier guide to unlocking extraordinary savings,
+        empowering you to shop smarter, not harder.
         <br />
         <br />
         We meticulously scour Amazon UK daily, unearthing the most exceptional deals and price reductions, saving you
-        both time and money. We're committed to making your online shopping experience more rewarding by helping you get
-        more value for your pound. <br />
+        both time and money. We&apos;re committed to making your online shopping experience more rewarding by helping
+        you get more value for your pound. <br />
         <br />
-        We don't just present deals; we provide a pathway to savvy shopping. Our commitment to you is to uncover
+        We don&apos;t just present deals; we provide a pathway to savvy shopping. Our commitment to you is to uncover
         bargains that bring you joy, all while ensuring you keep more money in your pocket.
         <br />
         <br />
@@ -22,7 +22,7 @@ const aboutUsDetail: FC = () => {
         deals. Remember, the best things in life are discounted!
         <br />
         <br />
-        Let's start saving together. Welcome aboard!
+        Let&apos;s start saving together. Welcome aboard!
         <br />
         <br />
         <br />
