@@ -11,7 +11,7 @@ const TermsOfService: NextPageWithLayout = () => {
   return (
     <>
       <DynamicHomeWarning />
-      <DynamicHomePopularCourse />
+      {/* <DynamicHomePopularCourse /> */}
       <DynamicCategoryDetail />
     </>
   )
