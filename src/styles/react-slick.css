@@ -519,6 +519,20 @@
   margin-right: 10px;
 }
 
+.subdetail_serviceContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.subdetail_serviceContainer div {
+  width: 2px;
+  height: 20px;
+  background: rgb(88, 88, 88);
+  margin-top: 0px;
+  margin-right: 10px;
+}
+
 .termsOfService_container {
   display: flex;
   flex-direction: column;
@@ -529,16 +543,162 @@
 
 .categoryDetail_container {
   display: flex;
-  width: 94%;
-  margin-left: 3%;
-  background: gray;
+  width: 96%;
+  margin-left: 2%;
+  /* background: gray; */
   margin-bottom: 100px;
+}
+
+.category_subContainer {
+  display: grid;
+  width: 100%;
+  row-gap: 20px;
+  column-gap: 20px;
+  grid-template-columns: auto auto auto;
+}
+
+.category_item {
+  width: 31vw;
+  height: 41vh;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  /* background-size: 100% 100%; */
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.automotive {
+  background-image: url('../../public/images/categories/automotive.jpeg');
+}
+
+.babyproducts {
+  background-image: url('../../public/images/categories/babyproducts.webp');
+}
+
+.beauty {
+  background-image: url('../../public/images/categories/beauty.webp');
+}
+
+.books {
+  background-image: url('../../public/images/categories/books.jpeg');
+}
+
+.businessIndustry {
+  background-image: url('../../public/images/categories/businessindustryandscience.webp');
+}
+
+.cdsAndVinyl {
+  background-image: url('../../public/images/categories/cdsandvinyl.jpeg');
+}
+
+.computersAndAccessories {
+  background-image: url('../../public/images/categories/computersandaccessories.jpeg');
+}
+
+.diyTools {
+  background-image: url('../../public/images/categories/diytools.jpeg');
+}
+
+.dvdBluray {
+  background-image: url('../../public/images/categories/dvdandbluray.jpeg');
+}
+
+.electronicsPhoto {
+  background-image: url('../../public/images/categories/electronicsandphoto.webp');
+}
+
+.garden {
+  background-image: url('../../public/images/categories/garden.jpeg');
+}
+
+.grocery {
+  background-image: url('../../public/images/categories/grocery.jpeg');
+}
+
+.healthPersonalCare {
+  background-image: url('../../public/images/categories/healthandpersonalcare.webp');
+}
+
+.homeKitchen {
+  background-image: url('../../public/images/categories/homeandkitchen.webp');
+}
+
+.largeAppliances {
+  background-image: url('../../public/images/categories/largeappliances.jpeg');
+}
+
+.musicalInstrumentsDj {
+  background-image: url('../../public/images/categories/musicalinstrumentsanddj.jpeg');
+}
+
+.stationeryOfficeSupplies {
+  background-image: url('../../public/images/categories/officesupplies.webp');
+}
+
+.pcVideoGame {
+  background-image: url('../../public/images/categories/pcandvideogames.jpeg');
+}
+
+.petSupplies {
+  background-image: url('../../public/images/categories/petsupplies.jpeg');
+}
+
+.shops {
+  background-image: url('../../public/images/categories/shops.jpeg');
+}
+
+.sportsOutdoors {
+  background-image: url('../../public/images/categories/sportsandoutdoors.jpeg');
+}
+
+.toysGames {
+  background-image: url('../../public/images/categories/toysandgames.jpeg');
+}
+
+.category_mainDetail {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #00000080;
+  color: white;
+}
+
+.category_mainDetail h2 {
+  font-size: 2.3rem;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-left: 0;
+  text-align: center;
+}
+
+.category_mainDetail p {
+  font-size: 1.5rem;
+  margin-top: 0px;
 }
 
 @media (max-width: 900px) {
   /* .badge_container {
     display: none;
   } */
+
+  .category_subContainer {
+    display: grid;
+    width: 100%;
+    row-gap: 20px;
+    column-gap: 20px;
+    grid-template-columns: auto auto;
+  }
+
+  .category_item {
+    width: 45vw;
+  }
 
   .termsOfService_container {
     width: 94%;
@@ -649,6 +809,18 @@
   }
 
   .mentor_mainRight {
+    width: 100%;
+  }
+
+  .category_subContainer {
+    display: grid;
+    width: 100%;
+    row-gap: 20px;
+    column-gap: 20px;
+    grid-template-columns: auto;
+  }
+
+  .category_item {
     width: 100%;
   }
 }

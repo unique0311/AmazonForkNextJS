@@ -5,7 +5,8 @@ const TermsOfServiceDetail: FC = () => {
     <div className="termsOfService_container">
       <h2>1. Introduction</h2>
       <p>
-        Welcome to Discount Donkey (the &quot;Website&quot;). The Website is owned and operated by [Your Company Name]
+        Welcome to Discount Donkey (the &quot;Website&quot;). The Website is owned and operated by{' '}
+        <span style={{ fontWeight: 'bold' }}>TWMM Holdings LTD</span>
         (&quot;us&quot;, &quot;we&quot;, or &quot;our&quot;). Please read these Terms of Service (&quot;Terms&quot;,
         &quot;Terms of Service&quot;) carefully before using our Website.
       </p>
@@ -50,9 +51,10 @@ const TermsOfServiceDetail: FC = () => {
       </p>
       <h2>5. Copyright Policy</h2>
       <p>
-        Unless otherwise noted, the design, content and all components of the Website are copyrights owned by [Your
-        Company Name] or third parties and are protected by United States and international copyright laws and should
-        not be reused or republished without express written permission.
+        Unless otherwise noted, the design, content and all components of the Website are copyrights owned by{' '}
+        <span style={{ fontWeight: 'bold' }}>TWMM Holdings LTD</span> or third parties and are protected by United
+        States and international copyright laws and should not be reused or republished without express written
+        permission.
       </p>
       <h2>6. Changes to the Terms of Service</h2>
       <p>
@@ -62,10 +64,10 @@ const TermsOfServiceDetail: FC = () => {
       </p>
       <h2>7. Contact Us</h2>
       <p>If you have any questions about these Terms, please contact us:</p>
-      <p>
-        By email: [Your Email]
-        <br /> By visiting this page on our website: [Your Website Contact Page]
-      </p>
+      <div className="subdetail_serviceContainer">
+        <div />
+        <p>By email: discountdonkeycouk@gmail.com</p>
+      </div>
     </div>
   )
 }

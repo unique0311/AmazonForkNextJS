@@ -135,11 +135,11 @@ const PrivacyPolicyDetail: FC = () => {
         <h2>Contact Us</h2>
       </div>
       <p>If you have any questions about this Privacy Policy, please contact Discount Donkey:</p>
-      <div className="subdetail_container">
+      <div className="subdetail_serviceContainer">
         <div />
-        <h2>By email: [Your Email]</h2>
+        <p>By email: discountdonkeycouk@gmail.com</p>
       </div>
-      <p>By visiting this page on our website: [Your Website Contact Page]</p>
+      {/* <p>By visiting this page on our website: [Your Website Contact Page]</p> */}
     </div>
   )
 }

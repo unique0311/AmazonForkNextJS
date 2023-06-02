@@ -1,20 +1,17 @@
-import React, { FC, useEffect, useState } from 'react'
-import Box from '@mui/material/Box'
-import Container from '@mui/material/Container'
+import React, { FC, useState, useEffect } from 'react'
+import { getData } from '../home/mentors.data'
+import { Box, Container } from '@mui/material'
 import { MentorCardItem } from '@/components/mentor'
-import { getData } from './mentors.data'
 import { useSelector } from 'react-redux'
-import { selectQueryState, selectMinPriceState, selectMaxPriceState, selectMostRecentState } from '@/querySlice'
 import { Mentor } from '@/interfaces/mentor'
+import { selectQueryState, selectMinPriceState, selectMaxPriceState, selectMostRecentState } from '@/querySlice'
 
-const HomeOurMentors: FC = () => {
+const SportsOutdoors: FC = () => {
   const [data, setData] = useState([])
   const query = useSelector(selectQueryState)
   const minPrice = useSelector(selectMinPriceState)
   const maxPrice = useSelector(selectMaxPriceState)
   const mostRecent = useSelector(selectMostRecentState)
-
-  // console.log('mostRecents: ...', mostRecent)
 
   const searchFilter: any = (array: any[]) => {
     return array.filter(
@@ -29,7 +26,7 @@ const HomeOurMentors: FC = () => {
     })
   }, [])
 
-  const filtered = searchFilter(data)
+  const filtered = searchFilter(data.filter((item: Mentor) => item.categoryName == 'Sports & Outdoors'))
 
   let sortData: any = filtered
 
@@ -46,8 +43,6 @@ const HomeOurMentors: FC = () => {
       return price1.price > price2.price ? 1 : price1.price < price2.price ? -1 : 0
     })
   }
-
-  // console.log('sortDate: ///', sortData)
 
   return (
     <Box
@@ -73,4 +68,4 @@ const HomeOurMentors: FC = () => {
   )
 }
 
-export default HomeOurMentors
+export default SportsOutdoors
