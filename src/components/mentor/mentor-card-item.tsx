@@ -14,7 +14,7 @@ const MentorCardItem: FC<Props> = ({ item }) => {
   const formattedDate: any = dates.toLocaleString('en-GB', { timeZone: 'Europe/London' })
 
   const d = new Date(String(item.dealCreatedAt))
-  const minTime = ~~((Date.now() - d.getTime()) / 1000 / 60) + 300
+  const minTime = ~~((Date.now() - d.getTime()) / 1000 / 60) + 240
   const hourTime = ~~(minTime / 60)
   const dayTime = ~~(hourTime / 24)
   const restHourTime = ~~(hourTime - dayTime * 24)

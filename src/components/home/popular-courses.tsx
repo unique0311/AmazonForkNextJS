@@ -9,7 +9,7 @@ import { IconButton, useMediaQuery } from '@mui/material'
 import IconArrowBack from '@mui/icons-material/ArrowBack'
 import IconArrowForward from '@mui/icons-material/ArrowForward'
 
-import { getData } from './mentors.data'
+import { getData, data } from './mentors.data'
 import { CourseCardItem } from '@/components/course'
 import { Mentor } from '@/interfaces/mentor'
 
@@ -62,13 +62,13 @@ const StyledDots = styled('ul')(({ theme }) => ({
 const HomePopularCourse: FC = () => {
   const { breakpoints } = useTheme()
   const matchMobileView = useMediaQuery(breakpoints.down('md'))
-  const [data, setData] = useState([])
+  // const [data, setData] = useState([])
 
-  useEffect(() => {
-    getData().then((result: any) => {
-      setData(result.data)
-    })
-  }, [])
+  // useEffect(() => {
+  //   getData().then((result: any) => {
+  //     setData(result.data)
+  //   })
+  // }, [])
 
   let sortData: any = data
 
