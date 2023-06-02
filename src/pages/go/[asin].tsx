@@ -6,6 +6,7 @@ export default function Page(): any {
   const { asin }: any = router.query
 
   useEffect(() => {
-    return window.location.replace('https://www.amazon.co.uk/dp/' + asin + '?tag=sellercirclel-21')
+    if (asin != undefined)
+      return window.location.replace('https://www.amazon.co.uk/dp/' + asin + '?tag=sellercirclel-21')
   }, [asin])
 }
