@@ -1,21 +1,21 @@
 import React, { FC, useState, useEffect } from 'react'
-import { getData } from './mentors.data'
+import { getData, data } from './mentors.data'
 import { Mentor } from '@/interfaces/mentor'
 import Link from 'next/link'
 
 const CategoryDetail: FC = () => {
-  const [data, setData] = useState([])
+  // const [data, setData] = useState([])
 
-  useEffect(() => {
-    getData().then((result: any) => {
-      setData(result.data)
-    })
-  }, [])
+  // useEffect(() => {
+  //   getData().then((result: any) => {
+  //     setData(result.data)
+  //   })
+  // }, [])
 
-  console.log(
-    'babyProducts: ',
-    data.filter((item: Mentor) => item.categoryName == 'Baby Products')
-  )
+  // console.log(
+  //   'babyProducts: ',
+  //   data.filter((item: Mentor) => item.categoryName == 'Baby Products')
+  // )
   return (
     <div className="categoryDetail_container">
       <div className="category_subContainer">

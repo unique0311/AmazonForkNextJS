@@ -1,5 +1,5 @@
 import React, { FC, useState, useEffect } from 'react'
-import { getData } from '../home/mentors.data'
+import { getData, data } from '../home/mentors.data'
 import { Box, Container } from '@mui/material'
 import { MentorCardItem } from '@/components/mentor'
 import { useSelector } from 'react-redux'
@@ -7,7 +7,7 @@ import { Mentor } from '@/interfaces/mentor'
 import { selectQueryState, selectMinPriceState, selectMaxPriceState, selectMostRecentState } from '@/querySlice'
 
 const ToyGames: FC = () => {
-  const [data, setData] = useState([])
+  // const [data, setData] = useState([])
   const query = useSelector(selectQueryState)
   const minPrice = useSelector(selectMinPriceState)
   const maxPrice = useSelector(selectMaxPriceState)
@@ -20,11 +20,11 @@ const ToyGames: FC = () => {
     )
   }
 
-  useEffect(() => {
-    getData().then((result: any) => {
-      setData(result.data)
-    })
-  }, [])
+  // useEffect(() => {
+  //   getData().then((result: any) => {
+  //     setData(result.data)
+  //   })
+  // }, [])
 
   const filtered = searchFilter(data.filter((item: Mentor) => item.categoryName == 'Toys & Games'))
 
