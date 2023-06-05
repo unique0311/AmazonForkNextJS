@@ -18,7 +18,6 @@ const NavigationItem: FC<NavigationItemProps> = ({ label, path }) => {
         sx={{
           position: 'relative',
           color: 'text.disabled',
-          // color:  'primary.main',
           cursor: 'pointer',
           fontWeight: 600,
           display: 'inline-flex',
@@ -27,7 +26,7 @@ const NavigationItem: FC<NavigationItemProps> = ({ label, path }) => {
           px: { xs: 0, md: 3 },
           mb: { xs: 3, md: 0 },
           fontSize: { xs: '1.2rem', md: 'inherit' },
-          ...(path === window.location.pathname &&  {
+          ...(path === '/' &&  {
             color: 'primary.main',
           }),
 
@@ -38,8 +37,7 @@ const NavigationItem: FC<NavigationItemProps> = ({ label, path }) => {
           '&:hover': {
             color: 'primary.main',
             '&>div': {
-              display: 'block',
-              color: 'primary.main'
+              display: 'block'
             },
           },
         }}
