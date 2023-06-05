@@ -9,12 +9,12 @@ const pageMenu: Array<Navigation> = [
   { label: 'All Deals', path: '/' },
   { label: 'Categories', path: '/categories' },
   { label: 'Join', path: '/newsletter' },
-  { label: 'About Us', path: 'aboutUs' },
+  { label: 'About Us', path: '/aboutUs' },
 ]
 
 const companyMenu: Array<Navigation> = [
-  { label: 'Privacy & Policy', path: 'privacyAndPolicy' },
-  { label: 'Terms of Service', path: 'termsOfService' },
+  { label: 'Privacy & Policy', path: '/privacyAndPolicy' },
+  { label: 'Terms of Service', path: '/termsOfService' },
 ]
 
 interface NavigationItemProps {
