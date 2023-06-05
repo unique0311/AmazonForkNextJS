@@ -6,9 +6,9 @@ import type { Navigation } from '@/interfaces/navigation'
 import { FooterSectionTitle } from '@/components/footer'
 
 const pageMenu: Array<Navigation> = [
-  { label: 'All Deals', path: '#' },
-  { label: 'Categories', path: '#popular-course' },
-  { label: 'Join', path: '#newsletter' },
+  { label: 'All Deals', path: '/' },
+  { label: 'Categories', path: '/categories' },
+  { label: 'Join', path: '/newsletter' },
   { label: 'About Us', path: 'aboutUs' },
 ]
 

@@ -17,11 +17,18 @@ const HomeFeature: FC = () => {
   dispatch(setMostRecent(filter))
 
   const handleMinPriceChange: any = (e: any) => {
-    dispatch(setMinPrice(e.target.value))
+    
+    if(e.target.value != '')
+      dispatch(setMinPrice(e.target.value))
+    else
+      dispatch(setMinPrice(0))
   }
 
   const handleMaxPriceChange: any = (e: any) => {
-    dispatch(setMaxPrice(e.target.value))
+    if(e.target.value != '')
+      dispatch(setMaxPrice(e.target.value))
+    else
+      dispatch(setMaxPrice(999999))
   }
 
   return (

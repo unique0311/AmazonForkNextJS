@@ -116,7 +116,7 @@ const HomePopularCourse: FC = () => {
               }}
             >
               <Typography variant="h1" sx={{ mt: { xs: 0, md: 2 }, fontSize: { xs: 18, md: 30 } }}>
-                Deals Of The Day
+                Hot Deals
               </Typography>
             </Box>
           </Grid>
