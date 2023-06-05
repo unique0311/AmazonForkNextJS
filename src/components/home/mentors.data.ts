@@ -3,7 +3,7 @@ import axios from 'axios'
 
 export const getData: any = async () => {
   try {
-    const data = await axios.get('http://18.168.254.253:8888/api/v1')
+    const data = await axios.get('https://api.discountdonkey.co.uk/')
     return data
   } catch (error) {
     console.log(error)

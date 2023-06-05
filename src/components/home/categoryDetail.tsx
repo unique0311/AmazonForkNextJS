@@ -1,16 +1,16 @@
 import React, { FC, useState, useEffect } from 'react'
-import { getData, data } from './mentors.data'
+import { getData } from './mentors.data'
 import { Mentor } from '@/interfaces/mentor'
 import Link from 'next/link'
 
 const CategoryDetail: FC = () => {
-  // const [data, setData] = useState([])
+  const [data, setData] = useState([])
 
-  // useEffect(() => {
-  //   getData().then((result: any) => {
-  //     setData(result.data)
-  //   })
-  // }, [])
+  useEffect(() => {
+    getData().then((result: any) => {
+      setData(result.data)
+    })
+  }, [])
 
   // console.log(
   //   'babyProducts: ',
@@ -163,14 +163,14 @@ const CategoryDetail: FC = () => {
             </div>
           </div>
         </Link>
-        <Link href="/deals/ ">
+        {/* <Link href="/deals/ ">
           <div className="category_item shops">
             <div className="category_mainDetail">
               <h2>SHOPS</h2>
               <p>{data.filter((item: Mentor) => item.categoryName == 'Shops').length}</p>
             </div>
           </div>
-        </Link>
+        </Link> */}
         <Link href="/deals/sportsOutdoors">
           <div className="category_item sportsOutdoors">
             <div className="category_mainDetail">
