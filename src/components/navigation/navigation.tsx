@@ -3,6 +3,8 @@ import Box from '@mui/material/Box'
 import { navigations } from './navigation.data'
 import Link from 'next/link'
 import MuiLink from '@mui/material/Link'
+import { useLocation } from 'react-router-dom'
+import { useRouter } from 'next/router'
 
 interface NavigationItemProps {
   label: string
@@ -10,6 +12,7 @@ interface NavigationItemProps {
 }
 
 const NavigationItem: FC<NavigationItemProps> = ({ label, path }) => {
+  const router = useRouter();
 
   return (
     <Link href={path} passHref>
@@ -26,7 +29,7 @@ const NavigationItem: FC<NavigationItemProps> = ({ label, path }) => {
           px: { xs: 0, md: 3 },
           mb: { xs: 3, md: 0 },
           fontSize: { xs: '1.2rem', md: 'inherit' },
-          ...(path === '/' &&  {
+          ...(path === router.pathname &&  {
             color: 'primary.main',
           }),
 
