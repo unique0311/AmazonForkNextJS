@@ -11,6 +11,8 @@ interface Props {
 }
 
 const CourseCardItem: FC<Props> = ({ item }) => {
+  const redirectionLink: any = String(item.link) + '?tag=sellercirclel-21'
+
   return (
     <Box
       sx={{
@@ -64,6 +66,7 @@ const CourseCardItem: FC<Props> = ({ item }) => {
             </Typography>
           </Box>
           <IconButton
+            href={redirectionLink}
             color="primary"
             sx={{ '&:hover': { backgroundColor: 'primary.main', color: 'primary.contrastText' } }}
           >

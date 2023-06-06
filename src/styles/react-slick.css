@@ -343,7 +343,7 @@
   /* text-align: center; */
   color: white;
   padding: 15px;
-  background: #068aca;
+  background: red;
   border-radius: 10px;
   font-size: 16px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -436,6 +436,10 @@
   cursor: pointer;
   text-decoration: none;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.courseCard_button {
+  text-decoration: none;
 }
 
 .getDealContainer_right {
