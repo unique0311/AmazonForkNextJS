@@ -36,6 +36,7 @@ const MentorCardItem: FC<Props> = ({ item }) => {
     }
   }
   return (
+    <>{~~(((item.beforePrice - item.price) / item.beforePrice) * 100) >= 0?
     <div className="mentor_container">
       <Image src={item.imageUrl} alt={'Products ' + item.asin} width={300} height={200} className="image_container" />
       <div className="mentor_mainRight">
@@ -64,7 +65,9 @@ const MentorCardItem: FC<Props> = ({ item }) => {
           ? `${~~(((item.beforePrice - item.price) / item.beforePrice) * 100)} % OFF`
           : `${Math.abs(~~(((item.beforePrice - item.price) / item.beforePrice) * 100))} % ON`}
       </div>
-    </div>
+    </div>:<></>
+  }</>
+    
   )
 }
 export default MentorCardItem
