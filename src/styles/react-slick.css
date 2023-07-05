@@ -622,6 +622,68 @@
   background: linear-gradient(140deg, #00A19C, #8CF4AD);
 }
 
+.categoryNew_title {
+  font-size: 28px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.categoryNew_container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.categoryNew_container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #E5E5E5;
+  border-radius: 50%;
+}
+
+.categoryNew_container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.categoryNew_container input:checked ~ .checkmark {
+  background-color: #249600;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.categoryNew_container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.categoryNew_container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
 .automotive {
   background-image: url('../../public/images/categories/Captures/automotive.jpg');
 }

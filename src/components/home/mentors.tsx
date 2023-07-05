@@ -71,18 +71,67 @@ const HomeOurMentors: FC = () => {
     >
       <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
         <Box sx={{ display: 'flex', flexDirection: 'column', }}>
-          <h4>Categories</h4>
-          <select
-            value={value}
-            onChange={(e) => {
-              setValue(e.target.value)
-            }}
-          >
-            <option value="books">a</option>
-            <option value="b">b</option>
-            <option value="c">c</option>
-            <option value="d">d</option>
-          </select>
+          <h4 className='categoryNew_title'>Categories</h4>
+          <label className='categoryNew_container'>
+            Books
+            <input type='radio' name='radio'/>
+            <span className='checkmark'></span>
+          </label>
+          <label className='categoryNew_container'>
+            Fashion
+            <input type='radio' name='radio'/>
+            <span className='checkmark'></span>
+          </label>
+          <label className='categoryNew_container'>
+            Food & Drink
+            <input type='radio' name='radio'/>
+            <span className='checkmark'></span>
+          </label>
+          <label className='categoryNew_container'>
+            Health & Beauty
+            <input type='radio' name='radio'/>
+            <span className='checkmark'></span>
+          </label>
+          <label className='categoryNew_container'>
+            Home & Garden
+            <input type='radio' name='radio'/>
+            <span className='checkmark'></span>
+          </label>
+          <label className='categoryNew_container'>
+            Kids
+            <input type='radio' name='radio'/>
+            <span className='checkmark'></span>
+          </label>
+          <label className='categoryNew_container'>
+            Music
+            <input type='radio' name='radio'/>
+            <span className='checkmark'></span>
+          </label>
+          <label className='categoryNew_container'>
+            Sport
+            <input type='radio' name='radio'/>
+            <span className='checkmark'></span>
+          </label>
+          <label className='categoryNew_container'>
+            Technology
+            <input type='radio' name='radio'/>
+            <span className='checkmark'></span>
+          </label>
+          <label className='categoryNew_container'>
+            TV & Film
+            <input type='radio' name='radio'/>
+            <span className='checkmark'></span>
+          </label>
+          <label className='categoryNew_container'>
+            Travel
+            <input type='radio' name='radio'/>
+            <span className='checkmark'></span>
+          </label>
+          <label className='categoryNew_container'>
+            Other
+            <input type='radio' name='radio'/>
+            <span className='checkmark'></span>
+          </label>
         </Box>
         <Box maxWidth="lg">
           {sortData.map((item: Mentor) => (
