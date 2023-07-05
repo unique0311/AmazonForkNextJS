@@ -21,7 +21,7 @@ const SearchNavigation: FC = () => {
       </IconButton>
       <InputBase
         sx={{ ml: 1, flex: 1, color: '#ADADAD', fontSize: '15px' }}
-        placeholder="Search brands, products etc..."
+        placeholder="Search Offers ..."
         inputProps={{ 'aria-label': 'search brands, products, etc.' }}
         onChange={handleChange}
       />

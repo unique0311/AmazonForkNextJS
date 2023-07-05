@@ -11,7 +11,7 @@ const HomeNewsLetter: FC = () => {
         <Box
           sx={{
             //#00A19C, #8CF4AD
-            height: "100vh",
+            height: "75vh",
             // borderRadius: 10,
             // py: { xs: 4, md: 10 },
             px: { xs: 4, md: 8 },

@@ -30,7 +30,7 @@ const NavigationItem: FC<NavigationItemProps> = ({ label, path }) => {
         underline="hover"
         sx={{
           display: 'block',
-          mb: 1,
+          mb: 0.2,
           color: 'black',
           fontWeight: "bold"
         }}

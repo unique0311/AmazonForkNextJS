@@ -52,7 +52,7 @@ const MentorCardItem: FC<Props> = ({ item }) => {
           <div className="beforePrice">£{item.beforePrice}</div>
           <div className="currentPrice">£{item.price}</div>
           <div className="priceCross" />
-          <div className="manufacturer">{item.manufacturer}</div>
+          <div className="manufacturer">Amazon.com</div>
         </div>
         {/* <h6>{item.description}</h6> */}
         <div className="getDeal_button">
