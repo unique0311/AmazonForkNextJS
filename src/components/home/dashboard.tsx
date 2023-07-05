@@ -83,14 +83,15 @@ const DashboardContainer: FC = () => {
           md: 12,
         }, 
         px: { 
-          xs: 5, 
-          md: 20 
+          xs: 5,
+          md: 20
         },
         backgroundColor: '#EEF0F2', //#ecf3f3
       }}
+      className='dashboarda_container'
     >
       <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-        <Box sx={{ display: 'flex', flexDirection: 'column', }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column'}} className='categoryMain_container'>
           <h4 className='categoryNew_title'>Categories</h4>
           <label className='categoryNew_container' onClick={() => setSelected('All')}>
             All ({sortData.length})

@@ -8,7 +8,7 @@ import { FooterNavigation } from '@/components/footer'
 
 const Footer: FC = () => {
   return (
-    <Box component="footer" sx={{ backgroundColor: '#ffffff', py: { xs: 1, md: 2 }, color: 'black', px: { xs: 5, md: 20 } }}>
+    <Box component="footer" sx={{ backgroundColor: '#ffffff', py: { xs: 1, md: 2 }, color: 'black', px: { xs: 5, md: 20 } }} className='footer_cotainer'>
       <Box>
         <Grid spacing={1}>
           <Grid item xs={12} md={5}>
