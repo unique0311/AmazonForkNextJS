@@ -27,7 +27,7 @@ const CategoryTitle: FC = () => {
 
   const filtered = searchFilter(data)
 
-  let sortData: any = filtered
+  const sortData: any = filtered
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', }}>
