@@ -5,8 +5,7 @@ const PrivacyPolicyDetail: FC = () => {
     <div className="privacyPolicy_container">
       <h1>Introduction</h1>
       <div className="subdetail_container">
-        <div />
-        <h2>Welcome to Discount Donkey (here after referred to as &quot;the Website&quot;).</h2>
+        <h2>1. Welcome to Discount Donkey (here after referred to as &quot;the Website&quot;).</h2>
       </div>
       <p>
         This page informs you of our policies regarding the collection, use, and disclosure of personal data when you
@@ -14,16 +13,14 @@ const PrivacyPolicyDetail: FC = () => {
       </p>
       <p>By using the Website, you agree to the collection and use of information in accordance with this policy.</p>
       <div className="subdetail_container">
-        <div />
-        <h2>Information Collection and Use</h2>
+        <h2>2. Information Collection and Use</h2>
       </div>
       <p>
         We collect several different types of information for various purposes to provide and improve our service to
         you.
       </p>
       <div className="subdetail_container">
-        <div />
-        <h2>Personal Data</h2>
+        <h2>3. Personal Data</h2>
       </div>
       <p>
         While using our Website, we may ask you to provide us with certain personally identifiable information that can
@@ -31,16 +28,15 @@ const PrivacyPolicyDetail: FC = () => {
         but is not limited to:
       </p>
       <div className="subdetail_container">
-        <div />
-        <h2>Email address</h2>
+        <h2>4. Email address</h2>
       </div>
       <p>
         This information will be used to send you notifications about Amazon discounts. We, at Discount Donkey, will not
         use or share your information with anyone except as described in this Privacy Policy.
       </p>
       <div className="subdetail_container">
-        <div />
-        <h2>Usage Data</h2>
+        {/* <div /> */}
+        <h2>5. Usage Data</h2>
       </div>
       <p>
         We may also collect information about how the Website is accessed and used (&quot;Usage Data&quot;). This Usage
@@ -49,8 +45,8 @@ const PrivacyPolicyDetail: FC = () => {
         on those pages, unique device identifiers and other diagnostic data.
       </p>
       <div className="subdetail_container">
-        <div />
-        <h2>Use of Data</h2>
+        {/* <div /> */}
+        <h2>6. Use of Data</h2>
       </div>
       <p>
         Discount Donkey uses the collected data for various purposes:
@@ -82,8 +78,8 @@ const PrivacyPolicyDetail: FC = () => {
         </ul>
       </p>
       <div className="subdetail_container">
-        <div />
-        <h2>Disclosure Of Data</h2>
+        {/* <div /> */}
+        <h2>7. Disclosure Of Data</h2>
       </div>
       <p>
         Discount Donkey may use third-party service providers to monitor and analyze the use of our Website. These third
@@ -111,16 +107,16 @@ const PrivacyPolicyDetail: FC = () => {
         </ul>
       </p>
       <div className="subdetail_container">
-        <div />
-        <h2>Affiliate Disclosure</h2>
+        {/* <div /> */}
+        <h2>8. Affiliate Disclosure</h2>
       </div>
       <p>
         Some of the links on our Website are affiliate links. This means if you click on the link and purchase the item,
         Discount Donkey will receive an affiliate commission at no extra cost to you. All opinions remain our own.
       </p>
       <div className="subdetail_container">
-        <div />
-        <h2>Changes To This Privacy Policy</h2>
+        {/* <div /> */}
+        <h2>9. Changes To This Privacy Policy</h2>
       </div>
       <p>
         We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy
@@ -131,12 +127,12 @@ const PrivacyPolicyDetail: FC = () => {
         effective when they are posted on this page.
       </p>
       <div className="subdetail_container">
-        <div />
-        <h2>Contact Us</h2>
+        {/* <div /> */}
+        <h2>10. Contact Us</h2>
       </div>
       <p>If you have any questions about this Privacy Policy, please contact Discount Donkey:</p>
       <div className="subdetail_serviceContainer">
-        <div />
+        {/* <div /> */}
         <p>By email: discountdonkeycouk@gmail.com</p>
       </div>
       {/* <p>By visiting this page on our website: [Your Website Contact Page]</p> */}

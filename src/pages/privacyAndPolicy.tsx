@@ -9,7 +9,7 @@ const DynamicPrivacyPolicyDetail = dynamic(() => import('../components/home/priv
 const PrivacyAndPolicy: NextPageWithLayout = () => {
   return (
     <>
-      <DynamicHomeWarning />
+      {/* <DynamicHomeWarning /> */}
       <DynamicPrivacyPolicyDetail />
     </>
   )

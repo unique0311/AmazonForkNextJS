@@ -80,7 +80,7 @@ const DashboardContainer: FC = () => {
         },
         pb: {
           xs: 8,
-          md: 12,
+          md: 36,
         }, 
         px: { 
           xs: 5,

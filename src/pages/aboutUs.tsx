@@ -9,7 +9,7 @@ const DynamicAboutUsDetail = dynamic(() => import('../components/home/aboutUsDet
 const AboutUs: NextPageWithLayout = () => {
   return (
     <>
-      <DynamicHomeWarning />
+      {/* <DynamicHomeWarning /> */}
       <DynamicAboutUsDetail />
     </>
   )

@@ -8,7 +8,7 @@ import { FooterNavigation } from '@/components/footer'
 
 const Footer: FC = () => {
   return (
-    <Box component="footer" sx={{ backgroundColor: '#ffffff', py: { xs: 1, md: 2 }, color: 'black', px: { xs: 5, md: 20 } }} className='footer_cotainer'>
+    <Box component="footer" sx={{ backgroundColor: '#ffffff', py: { xs: 1, md: 2 }, color: 'black', px: { xs: 5, md: 20 } }} className='footer_container'>
       <Box>
         <Grid spacing={1}>
           <Grid item xs={12} md={5}>
@@ -26,6 +26,9 @@ const Footer: FC = () => {
             <p className='copyRight'>All Rights Reserved</p>
           </Grid>
         </Grid>
+      </Box>
+      <Box className='footerTitle_container'>
+        By clicking on any affiliate link and making a purchase, you understand that we may earn a commission from Amazon. This commission helps support the maintenance and operation of this website, allowing us to continue providing valuable content and recommendations.
       </Box>
     </Box>
   )

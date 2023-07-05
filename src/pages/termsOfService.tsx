@@ -9,7 +9,7 @@ const DynamicTermsOfServiceDetail = dynamic(() => import('../components/home/ter
 const TermsOfService: NextPageWithLayout = () => {
   return (
     <>
-      <DynamicHomeWarning />
+      {/* <DynamicHomeWarning /> */}
       <DynamicTermsOfServiceDetail />
     </>
   )

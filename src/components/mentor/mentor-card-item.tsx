@@ -13,7 +13,7 @@ const MentorCardItem: FC<Props> = ({ item }) => {
   const [isOpen, setIsOpen] = useState(false)
   const dates = new Date()
   const formattedDate: any = dates.toLocaleString('en-GB', { timeZone: 'Europe/London' })
-
+  const redirectionLink: any = String(item.link) + '?tag=discountdonke-21'
   const d = new Date(String(item.dealCreatedAt))
   const minTime = ~~((Date.now() - d.getTime()) / 1000 / 60)
   const hourTime = ~~(minTime / 60)
@@ -56,13 +56,13 @@ const MentorCardItem: FC<Props> = ({ item }) => {
         </div>
         {/* <h6>{item.description}</h6> */}
         <div className="getDeal_button">
-          <div onClick={() => setIsOpen(true)}>
-            <p>Get Deal</p>
+          <a href={redirectionLink} className='getDeal_newButton'>
+            <h4>Get Deal</h4>
             <Image src={shareImage} width={17} height={17} className='shareImage_container'/>
-          </div>
+          </a>
           <p>Posted {time} ago</p>
         </div>
-        {isOpen && <DealModal setIsOpen={setIsOpen} item={item} />}
+        {/* {isOpen && <DealModal setIsOpen={setIsOpen} item={item} />} */}
       </div>
       {/* <div className="badge_container">
         {~~(((item.beforePrice - item.price) / item.beforePrice) * 100) >= 0

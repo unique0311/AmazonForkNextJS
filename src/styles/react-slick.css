@@ -298,7 +298,7 @@
   margin-bottom: 30px;
 }
 
-.getDeal_button div {
+.getDeal_newButton {
   background: #249600;
   padding: 4px 21px;
   border-radius: 25px;
@@ -306,9 +306,10 @@
   display: flex;
   align-items: center;
   flex-direction: row;
+  text-decoration: none;
 }
 
-.getDeal_button div p {
+.getDeal_newButton h4 {
   color: white;
   margin-top: 2px;
   margin-bottom: 0px;
@@ -528,11 +529,11 @@
 }
 
 .privacyPolicy_container h1 {
-  font-size: 48px;
+  font-size: 40px;
 }
 
 .privacyPolicy_container h2 {
-  font-size: 28px;
+  /* font-size: 28px; */
   margin-bottom: 10px;
 }
 
@@ -802,6 +803,23 @@
   font-size: 15px;
 }
 
+.footer_container {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.footerTitle_container {
+  width: 760px;
+  font-size: 20px;
+}
+
 @media (max-width: 1820px) {
 
   .categoryMain_container {
@@ -817,7 +835,7 @@
   }
 }
 
-@media (max-width: 1480px) {
+@media (max-width: 1820px) {
   .dashboarda_container {
     padding-left: 100px;
     padding-right: 100px;
@@ -828,13 +846,52 @@
     padding-right: 100px;
   }
 
-  .footer_cotainer {
+  .footer_container {
     padding-left: 100px;
     padding-right: 100px;
   }
 
   .categoryMain_container {
     width: 700px;
+  }
+}
+
+@media (max-width: 1420px) {
+  .dashboarda_container {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .header_container {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .footer_container {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .categoryMain_container {
+    width: 800px;
+  }
+
+  .categoryNew_title {
+    font-size: 21px;
+  }
+
+  .categoryNew_container {
+    font-size: 15px;
+  }
+
+  .checkmark {
+    height: 22px;
+    width: 22px;
+  }
+
+  .categoryNew_container .checkmark::after {
+    top: 7px;
+    left: 7px;
   }
 }
 
@@ -853,7 +910,7 @@
     padding-right: 15px;
   }
 
-  .footer_cotainer {
+  .footer_container {
     padding-left: 15px;
     padding-right: 15px;
   }
