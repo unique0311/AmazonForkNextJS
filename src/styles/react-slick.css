@@ -188,9 +188,11 @@
   margin-bottom: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 10px;
+  padding-left: 20px;
   display: flex;
   flex-direction: row;
   position: relative;
+  align-items: center;
 }
 
 .mentor_container:hover {
@@ -202,14 +204,17 @@
   display: flex;
   flex-direction: column;
   width: calc(100% - 200px);
-  padding-left: 20px;
+  padding-left: 30px;
   padding-right: 20px;
 }
 
 .mentor_mainRight h5 {
   font-size: 1.25rem;
   margin-top: 30px;
+  height: 65px;
+  overflow: hidden;
   margin-bottom: 5px;
+  font-weight: bold;
 }
 
 .mentor_mainRight h5:hover {
@@ -254,45 +259,74 @@
 
 .image_container {
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .currentPrice {
-  color: #caa94a;
+  margin-left: 10px;
+  color: #239601;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .beforePrice {
   text-decoration: line-through;
-  line-height: 20px;
-  margin-left: 10px;
-  color: #9ca3af;
+  line-height: 2px;
+  font-weight: 100;
+  font-size: 16px;
+  color: #239601;
 }
 
 .priceCross {
   width: 1px;
   height: 20px;
-  background: #00000094;
+  background: #90949a4f;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.manufacturer {
+  color: #239601;
 }
 
 .getDeal_button {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
-  margin-right: 40px;
+  justify-content: flex-start;
+  /* margin-right: 40px; */
   margin-bottom: 30px;
 }
 
 .getDeal_button div {
-  background: #ff7900;
-  padding: 5px 20px;
-  color: white;
+  background: #249600;
+  padding: 4px 21px;
   border-radius: 25px;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.getDeal_button div p {
+  color: white;
+  margin-top: 2px;
+  margin-bottom: 0px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.shareImage_container {
+  margin-left: 20px;
+}
+
+.getDeal_button p {
+  color: #90949A;
+  font-size: 15px;
 }
 
 .getDeal_button div:hover {
-  background: #ff9300;
+  background: #239601;
   transition: all ease-in-out 0.3s;
   cursor: pointer;
 }
@@ -575,6 +609,19 @@
   cursor: pointer;
 }
 
+.comingSoon_button {
+  color: white;
+  font-size: 28px;
+  background: black;
+  border-radius: 9999px;
+  padding: 10px 40px;
+  cursor: pointer;
+}
+
+.comingSoon_container {
+  background: linear-gradient(140deg, #00A19C, #8CF4AD);
+}
+
 .automotive {
   background-image: url('../../public/images/categories/Captures/automotive.jpg');
 }
@@ -611,9 +658,9 @@
   background-image: url('../../public/images/categories/Captures/dvd.jpg');
 }
 
-.electronicsPhoto {
+/* .electronicsPhoto {
   background-image: url('../../public/images/categories/electronicsandphoto.webp');
-}
+} */
 
 .garden {
   background-image: url('../../public/images/categories/Captures/garden.jpg');
@@ -651,9 +698,9 @@
   background-image: url('../../public/images/categories/Captures/pet.jpg');
 }
 
-.shops {
+/* .shops {
   background-image: url('../../public/images/categories/shops.jpeg');
-}
+} */
 
 .sportsOutdoors {
   background-image: url('../../public/images/categories/Captures/sports.jpg');
@@ -685,6 +732,12 @@
 .category_mainDetail p {
   font-size: 1.5rem;
   margin-top: 0px;
+}
+
+.copyRight {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 15px;
 }
 
 @media (max-width: 900px) {

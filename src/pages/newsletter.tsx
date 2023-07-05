@@ -9,7 +9,7 @@ const DynamicHomeNewsLetter = dynamic(() => import('../components/home/newslette
 const Newsletter: NextPageWithLayout = () => {
   return (
     <>
-      <DynamicHomeWarning />
+      {/* <DynamicHomeWarning /> */}
       <DynamicHomeNewsLetter />
     </>
   )

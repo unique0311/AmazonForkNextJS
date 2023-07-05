@@ -17,9 +17,10 @@ const Logo: FC<Props> = ({ onClick, variant }) => {
           fontWeight: 700,
           '& span': { color: variant === 'primary' ? 'primary.main' : 'unset' },
           cursor: 'pointer',
+          mr: 5
         }}
       >
-        <Image src="/images/logo_donkey_1.png" alt="Discount Donkey" width={100} height={50} />
+        <Image src="/images/logo_donkey.png" alt="Discount Donkey" width={180} height={40} />
       </Typography>
     </Box>
   )

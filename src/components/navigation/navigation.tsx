@@ -20,7 +20,7 @@ const NavigationItem: FC<NavigationItemProps> = ({ label, path }) => {
         underline="none"
         sx={{
           position: 'relative',
-          color: 'text.disabled',
+          color: 'black',
           cursor: 'pointer',
           fontWeight: 600,
           display: 'inline-flex',

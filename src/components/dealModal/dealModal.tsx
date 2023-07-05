@@ -10,7 +10,7 @@ interface Props {
 const DealModal: FC<Props> = ({ setIsOpen, item }) => {
   const d = new Date(String(item.dealCreatedAt))
   const currentUrl = window.location.href
-  const redirectionLink: any = String(item.link) + '?tag=sellercirclel-21'
+  const redirectionLink: any = String(item.link) + '?tag=discountdonke-21'
   const minTime = ~~((Date.now() - d.getTime()) / 1000 / 60)
   const hourTime = ~~(minTime / 60)
   const dayTime = ~~(hourTime / 24)

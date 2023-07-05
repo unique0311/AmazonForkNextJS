@@ -26,6 +26,7 @@
 body {
   /* background-color: var(--color-background); */
   background-color: '#fff';
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 @-webkit-keyframes click_animation {

@@ -5,16 +5,17 @@ import MuiLink from '@mui/material/Link'
 import type { Navigation } from '@/interfaces/navigation'
 import { FooterSectionTitle } from '@/components/footer'
 
-const pageMenu: Array<Navigation> = [
-  { label: 'All Deals', path: '/' },
-  { label: 'Categories', path: '/categories' },
-  { label: 'Join', path: '/newsletter' },
-  { label: 'About Us', path: '/aboutUs' },
-]
+// const pageMenu: Array<Navigation> = [
+//   { label: 'All Deals', path: '/' },
+//   { label: 'Categories', path: '/categories' },
+//   { label: 'Join', path: '/newsletter' },
+//   { label: 'About Us', path: '/aboutUs' },
+// ]
 
 const companyMenu: Array<Navigation> = [
-  { label: 'Privacy & Policy', path: '/privacyAndPolicy' },
-  { label: 'Terms of Service', path: '/termsOfService' },
+  { label: 'Privacy policy', path: '/privacyAndPolicy' },
+  { label: 'Terms & Conditions', path: '/termsOfService' },
+  { label: 'About us', path: '/aboutUs' },
 ]
 
 interface NavigationItemProps {
@@ -30,7 +31,8 @@ const NavigationItem: FC<NavigationItemProps> = ({ label, path }) => {
         sx={{
           display: 'block',
           mb: 1,
-          color: 'primary.contrastText',
+          color: 'black',
+          fontWeight: "bold"
         }}
       >
         {label}
@@ -42,14 +44,14 @@ const NavigationItem: FC<NavigationItemProps> = ({ label, path }) => {
 const FooterNavigation: FC = () => {
   return (
     <Grid container spacing={2}>
-      <Grid item xs={12} md={6}>
+      {/* <Grid item xs={12} md={6}>
         <FooterSectionTitle title="Menu" />
         {pageMenu.map(({ label, path }, index) => (
           <NavigationItem key={index + path} label={label} path={path} />
         ))}
-      </Grid>
+      </Grid> */}
       <Grid item xs={12} md={6}>
-        <FooterSectionTitle title="About" />
+        {/* <FooterSectionTitle title="About" /> */}
         {companyMenu.map(({ label, path }, index) => (
           <NavigationItem key={index + path} label={label} path={path} />
         ))}

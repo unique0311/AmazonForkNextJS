@@ -14,14 +14,14 @@ const SearchNavigation: FC = () => {
   return (
     <Paper
       component="form"
-      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 350, backgroundColor: '#e5e5e5' }}
+      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 350, backgroundColor: '#EEF0F2', borderRadius: 2}}
     >
-      <IconButton type="button" sx={{ p: '10px' }} aria-label="search">
-        <Search sx={{ color: '#aeaeae' }} />
+      <IconButton type="button" sx={{ p: '2px 10px' }} aria-label="search">
+        <Search sx={{ color: '#ADADAD' }} />
       </IconButton>
       <InputBase
-        sx={{ ml: 1, flex: 1, color: '#aeaeae' }}
-        placeholder="Search Brands, Products, etc..."
+        sx={{ ml: 1, flex: 1, color: '#ADADAD', fontSize: '15px' }}
+        placeholder="Search brands, products etc..."
         inputProps={{ 'aria-label': 'search brands, products, etc.' }}
         onChange={handleChange}
       />

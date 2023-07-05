@@ -13,6 +13,7 @@ const HomeOurMentors: FC = () => {
   const minPrice = useSelector(selectMinPriceState)
   const maxPrice = useSelector(selectMaxPriceState)
   const mostRecent = useSelector(selectMostRecentState)
+  const [value, setValue] = useState('books')
 
   // console.log('mostRecents: ...', mostRecent)
 
@@ -60,15 +61,35 @@ const HomeOurMentors: FC = () => {
         pb: {
           xs: 8,
           md: 12,
+        }, 
+        px: { 
+          xs: 5, 
+          md: 20 
         },
-        backgroundColor: '#ecf3f3',
+        backgroundColor: '#EEF0F2', //#ecf3f3
       }}
     >
-      <Container maxWidth="lg">
-        {sortData.map((item: Mentor) => (
-          <MentorCardItem key={String(item)} item={item} />
-        ))}
-      </Container>
+      <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column', }}>
+          <h4>Categories</h4>
+          <select
+            value={value}
+            onChange={(e) => {
+              setValue(e.target.value)
+            }}
+          >
+            <option value="books">a</option>
+            <option value="b">b</option>
+            <option value="c">c</option>
+            <option value="d">d</option>
+          </select>
+        </Box>
+        <Box maxWidth="lg">
+          {sortData.map((item: Mentor) => (
+            <MentorCardItem key={String(item)} item={item} />
+          ))}
+        </Box>
+      </Box>
     </Box>
   )
 }

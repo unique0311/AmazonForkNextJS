@@ -19,14 +19,14 @@ const StyledButtonRoot = styled('button', {
   shouldForwardProp: (prop) =>
     prop !== 'variant' && prop !== 'color' && prop !== 'size' && prop !== 'disableHoverEffect',
 })<StyledButtonRootProps>(({ theme, color, variant, size, disableHoverEffect }) => ({
-  fontFamily,
+  fontFamily: 'Arial, Helvetica, sans-serif',
   cursor: 'pointer',
   minWidth: 40,
-  fontSize: 14,
+  fontSize: 24,
   fontWeight: 500,
   lineHeight: 1.5,
   letterSpacing: 1,
-  borderRadius: Number(theme.shape.borderRadius) * 3,
+  borderRadius: Number(theme.shape.borderRadius) * 999,
 
   display: 'inline-flex',
   alignItems: 'center',
@@ -163,13 +163,13 @@ const StyledButton: FC<Props> = (props: Props) => {
   return (
     <StyledButtonRoot onClick={onClick} disableHoverEffect={disableHoverEffect} {...rest}>
       {startIcon && (
-        <Box component="span" sx={{ display: 'inherit', mr: 1, ml: -0.5 }}>
+        <Box component="span" sx={{ display: 'inherit', mr: 1, ml: -0.5, fontFamily: 'Arial, Helvetica, sans-serif' }}>
           {startIcon}
         </Box>
       )}
       <Box component="span">{children}</Box>
       {endIcon && (
-        <Box component="span" sx={{ display: 'inherit', ml: 1, mr: -0.5 }}>
+        <Box component="span" sx={{ display: 'inherit', ml: 1, mr: -0.5, fontFamily: 'Arial, Helvetica, sans-serif' }}>
           {endIcon}
         </Box>
       )}

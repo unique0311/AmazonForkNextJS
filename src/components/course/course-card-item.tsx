@@ -11,7 +11,7 @@ interface Props {
 }
 
 const CourseCardItem: FC<Props> = ({ item }) => {
-  const redirectionLink: any = String(item.link) + '?tag=sellercirclel-21'
+  const redirectionLink: any = String(item.link) + '?tag=discountdonke-21'
 
   return (
     <Box
