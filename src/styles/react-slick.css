@@ -900,6 +900,10 @@
     display: none;
   } */
 
+  .footerTitle_container {
+    display: none;
+  }
+
   .dashboarda_container {
     padding-left: 15px;
     padding-right: 15px;
