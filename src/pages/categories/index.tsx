@@ -6,13 +6,15 @@ import { MainLayout } from '@/components/layout'
 const DynamicHomeWarning = dynamic(() => import('../../components/home/warning'))
 const DynamicHomePopularCourse = dynamic(() => import('../../components/home/popular-courses'))
 const DynamicCategoryDetail = dynamic(() => import('../../components/home/categoryDetail'))
+const DynamicHomeNewsLetter = dynamic(() => import('../../components/home/newsletter'))
 
 const TermsOfService: NextPageWithLayout = () => {
   return (
     <>
-      <DynamicHomeWarning />
+      {/* <DynamicHomeWarning /> */}
       {/* <DynamicHomePopularCourse /> */}
-      <DynamicCategoryDetail />
+      {/* <DynamicCategoryDetail /> */}
+      <DynamicHomeNewsLetter />
     </>
   )
 }
