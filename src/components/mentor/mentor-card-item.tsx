@@ -13,7 +13,8 @@ const MentorCardItem: FC<Props> = ({ item }) => {
   const [isOpen, setIsOpen] = useState(false)
   const dates = new Date()
   const formattedDate: any = dates.toLocaleString('en-GB', { timeZone: 'Europe/London' })
-  const redirectionLink: any = String(item.link) + '?tag=discountdonke-21'
+  // const redirectionLink: any = String(item.link) + '?tag=discountdonke-21'
+  const redirectionLink: any = window.location.href + 'go/' + String(item.asin)
   const d = new Date(String(item.dealCreatedAt))
   const minTime = ~~((Date.now() - d.getTime()) / 1000 / 60)
   const hourTime = ~~(minTime / 60)

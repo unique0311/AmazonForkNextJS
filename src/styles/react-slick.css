@@ -1063,4 +1063,8 @@
   .category_item {
     width: 100%;
   }
+
+  .dashboardCard_style {
+    width: 100%;
+  }
 }
