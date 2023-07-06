@@ -194,7 +194,7 @@ const DashboardContainer: FC = () => {
             <span className='checkmark'></span>
           </label>
         </Box>
-        <Box maxWidth="lg">
+        <Box sx={{ width: '100%'}}>
           {
             selected === 'All' ? ( 
             <>
