@@ -13,8 +13,8 @@ const TermsOfService: NextPageWithLayout = () => {
     <>
       {/* <DynamicHomeWarning /> */}
       {/* <DynamicHomePopularCourse /> */}
-      {/* <DynamicCategoryDetail /> */}
-      <DynamicHomeNewsLetter />
+      <DynamicCategoryDetail />
+      {/* <DynamicHomeNewsLetter /> */}
     </>
   )
 }
